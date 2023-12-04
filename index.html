@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP és AJAX</title>
+</head>
+
+<body>
+    <h1>A HTTP protokoll</h1>
+    <p>
+        A HTTP (HyperText Transfer Protocol) egy hálózati kommunikációs protokoll.
+        A webszerver és a kliens ezen szabályok alapján bonyolítanak adatforgalmat.
+        <br>
+        A kliens, másnéven a user agent, általában véve egy böngésző, a szerver
+        pedig egy webszerver.
+    </p>
+
+    <h2>A kliens kérést intéz a szerver felé</h2>
+    <p>
+        <b>A kérés első sora</b> metodús/erőforrás/verzió alapú <br>
+    </p>
+
+    <h3>A HTTP metódus</h3>
+    <p>
+        A metódus mondja meg a kommunikáció formáját.
+    <ul>
+        <li>GET: egy erőforrás lekérdezése (nincs üzenettest)</li>
+        <li>POST: űrlap információk feltöltése</li>
+        <li>DELETE: erőforrás letörlése (nincs üzenettest)</li>
+        <li>PATCH: részleges felülírás</li>
+        <li>PUT: teljes felülírás</li>
+        <li>HEAD: visszaadja az ugynevezett fejlécállományt</li>
+    </ul>
+    </p>
+
+    <h3>Fejlécállomány</h3>
+    <p>
+        A fejlécállomány (head) a kliens és a szerver is küldhet.
+        Ezek vagy beállítások, vagy információk a küldőről.
+    </p>
+
+    <h3>Erőforrás</h3>
+    <p>
+        Az erőforrás az általában véve egy url, vagy egy fájl amin kerresztül egy erőforrást el tudunk érni.
+    </p>
+
+    <h3>Verzió</h3>
+    <p>
+    <ul>
+        <li>HTTP/1.1 - titkosítatlan HTTP</li>
+        <li>HTTP/2.0 - titkosított HTTP (https)</li>
+    </ul>
+    </p>
+
+    <h3>Üzenettest (body)</h3>
+    <p>
+        Az üzenettestben a szerver felé küldött adatok találhatóak (opcionális).
+    </p>
+
+    <h2>HTTP válasz</h2>
+    <p>
+        A http válasz első sora <b>verzió/státuszkód/szöveges magyarázat</b> alakú.
+    </p>
+
+    <h3>Válasz státuszkód</h3>
+    <ul>
+        <li>1xx - informatív válasz(mit kellenne a kliensnek a továbbiakban csinálni)</li>
+        <li>2xx - minden rendben</li>
+        <li>3xx - átírányítás (egy oldalnak a régi webcímét ütöm be akkor tud olyan átírányítást csinálni ami átvisz az új webcímre)</li>
+        <li>4xx - kliens hiba (400:bad request, 403:forbidden, 404:nem található az erőforrás)</li>
+        <li>5xx - szerver hiba(500:internal server error, 503: service unavailable)</li>
+    </ul>
+
+    <h3>Content-Type nevű fejléc</h3>
+    <p>
+        A content-type azt mondja meg, hogy milyen típusú adatot küldünk/fogadunk.
+
+        <ul>
+            <li>text/html - html kód</li>
+            <li>text/plain - egyszerű szöveg</li>
+            <li>application/json</li>
+            <li>x-www-form-urlencoded</li>
+            <li>multi/form-data</li>
+            <li>image/jpeg - image/png</li>
+        </ul>
+    </p>
+
+</body>
+
+</html>
